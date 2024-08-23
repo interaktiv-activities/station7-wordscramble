@@ -1,0 +1,266 @@
+/*SITE SETUP*/
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img {
+    width: 100%;
+}
+
+:root{
+--color-dark-blue:#152040; /* darkblue */
+--color-blue:#0588A6; /* blue */
+--color-beige-white:#FFF9ED;/* white */
+--color-light-blue:#07C4D9; /* aqua */
+--color-yellow:#fddd2b; /* yellow */
+--color-light-yellow:#FFE69B; /* light yellow */
+--color-red-1:#D14242; /* red */
+}
+
+
+/* FONTS */
+
+@font-face {
+    font-family: MoonGet;
+    src: url(fonts/moon_get-Heavy.ttf)
+}   
+
+@font-face {
+    font-family: Neue;
+    src: url(fonts/NeueHaasUnica/NeueHaasUnica-Bold.ttf)
+}   
+
+@font-face{
+    font-family: BuiltTitling;
+    src: url(fonts/BuiltTitling/built\ titling\ bd.ttf)
+}
+/* GAME BOARD ELEMENTS */
+.game-board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 520px;
+    width: 100%;
+    margin: 30px 0px 100px 0px;
+}
+
+.instructions{
+    color: #FFF;
+    text-align: center;
+    font-family: Neue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 24px 0px 0px 0px;
+}
+
+.submit-btn{
+    display: inline;
+    background: none;
+    border: none;
+    margin: 25px 0px 0px 0px;
+}
+
+.submit-btn:hover{
+    transition-duration: 150ms;
+    transform: translateY(-1.00em);
+}
+
+.submit-btn:active{
+    transition-duration: 150ms;
+    transform: translateY(-0.50em);
+}
+
+.prompt-text{
+    color: #FFFFFF;
+    text-align: center;
+    font-family: BuiltTitling;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 10.8px;
+    text-transform: lowercase;
+    margin: -10px 0px 0px 0px;
+}
+
+.prompt-container{
+    width: 674px;
+    height: 149px;
+    margin: 45px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt-question{
+    color: #FFF;
+    text-align: center;
+    font-family: Neue;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 639px;
+    margin: 12px 0px 0px 0px;
+}
+
+.prompt-box{
+    height: 240.5px;
+    width: 740px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-image: url(assets/desktop-prompt.png);
+    background-size: 740px auto;
+    background-repeat: no-repeat;
+}
+
+.input-box{
+    width: 420px;
+    border: solid 8px #07C4D9;
+    border-radius: 10px;
+    background-color: #0588A6;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    color: #FFF;
+    text-align: center;
+    font-family: Neue;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+::placeholder{
+    color: #FFF;
+    text-align: center;
+    font-family: Neue;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* TABLET MEDIA QUERIES */
+@media only screen and (max-width: 740px){
+    .game-board{
+        max-width: 450px;
+    }
+    
+    .instructions{
+        font-size: 14px;
+        width: 450px;
+        margin: 21px 0px 0px 0px;
+    }
+
+    .submit-btn{
+        height: 50px;
+        margin: 21px 0px 0px 0px;
+    }
+
+    .submit-btn-img{
+        height: 50px;
+    }
+
+    .prompt-container{
+        height: 250px;
+        width: 400px;
+        margin: 5px 0px 0px 0px;
+    }
+
+    .prompt-box{
+        height: 250px;
+        width: 400px ;
+        background-size: 400px 250px;
+        background-image: url(assets/mobile-prompt.png);
+    }
+
+    .prompt-text{
+        font-size: 32px;
+        margin: -10px 0px 0px 0px;
+        width: 320px;
+    }
+
+    .prompt-question{
+        font-size: 12px;
+        margin: 15px 0px 0px 0px;
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 428px){
+    .game-board{
+        max-width: 330px;
+    }
+    
+    .instructions{
+        font-size: 12px;
+        width: 330px;
+        margin: 21px 0px 0px 0px;
+    }
+
+    .submit-btn{
+        height: 35px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .submit-btn-img{
+        height: 35px;
+    }
+
+    .submit-btn:hover{
+        transition-duration: 150ms;
+        transform: translateY(-0.50em);
+    }
+    
+    .submit-btn:active{
+        transition-duration: 150ms;
+        transform: translateY(-0.25em);
+    }
+
+    .input-box{
+        width: 330px;
+        border: solid 6px #07C4D9;
+        border-radius: 8px;
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    ::placeholder{
+        font-size: 14px;
+    }
+
+    .prompt-container{
+        width: 330px;
+        height: 190px;
+        margin: 5px 0px 0px 0px;
+    }
+
+    .prompt-box{
+        width: 330px ;
+        height: 220px;
+        background-size: 330px;
+        background-image: url(assets/mobile-prompt.png);
+    }
+
+    .prompt-text{
+        font-size: 24px;
+        margin: -5px 0px 0px 0px;
+        width: 280px;
+    }
+
+    .prompt-question{
+        font-size: 12px;
+        margin: 5px 0px 0px 0px;
+        width: 280px;
+    }
+}
